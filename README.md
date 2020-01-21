@@ -1,5 +1,5 @@
-# iota-fountain
-Renders new IOTA transactions as a fountain stream
+# nano-fountain-beta
+Renders new NANO BETA transactions as a fountain stream
 
 ## Project setup
 ```
