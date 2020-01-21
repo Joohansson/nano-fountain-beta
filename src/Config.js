@@ -30,7 +30,7 @@ let currentCoin = getCurrentCoinKey()
 
 const baseHashExplorerURL = {
   VUE_APP_BITCOIN_FOUNTAIN: "https://www.blockchain.com/btc/tx/",
-  VUE_APP_NANO_FOUNTAIN: "https://nanocrawler.cc/explorer/block/",
+  VUE_APP_NANO_FOUNTAIN: "https://b.repnode.org/block/",
   VUE_APP_BANANO_FOUNTAIN: "https://creeper.banano.cc/explorer/block/",
   VUE_APP_IOTA_FOUNTAIN: "https://thetangle.org/transaction/"
 }
@@ -68,7 +68,7 @@ export function initializeTransactionStreamSubscriber() {
 
 const appTitles = {
   VUE_APP_BITCOIN_FOUNTAIN: "Bitcoin Fountain",
-  VUE_APP_NANO_FOUNTAIN: "NANO Fountain",
+  VUE_APP_NANO_FOUNTAIN: "NANO BETA Fountain",
   VUE_APP_BANANO_FOUNTAIN: "BANANO Fountain",
   VUE_APP_IOTA_FOUNTAIN: "IOTA Fountain"
 }

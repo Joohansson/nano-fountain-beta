@@ -14,7 +14,7 @@ let transactionsWithinInterval = 0
 const eventEmitter = new EventEmitter()
 
 function getWebSocketURL() {
-  return `wss://ws.nanocrawler.cc/`
+  return `wss://ws-beta.nanoticker.info`
 }
 
 function makeWebSocket() {
@@ -36,23 +36,23 @@ function tryWebSocketConnection() {
     console.log(`${new Date().toISOString()}: Opened transaction stream WebSocket`)
     eventEmitter.emit('state', ConnectionStatusEnum.connected)
     webSocketClient.send(JSON.stringify({
-      "event":"subscribe",
-      "data": ["all"]
+      "action": "subscribe",
+      "topic": "confirmation"
     }))
   })
 
   webSocketClient.addEventListener('message', message => {
     try {
       const messageObject = JSON.parse(Buffer.from(message.data).toString())
-      console.log(`${new Date().toISOString()}: got newTransaction`, messageObject)
-      if(messageObject.event !== "newTransaction") { return console.log(`${new Date().toISOString()}: ignore ${messageObject.event}`) }
-      if(!messageObject.data) { return console.warn(`${new Date().toISOString()}: received unserializable message; no data`) }
-      if(!messageObject.data.hash) { return console.warn(`${new Date().toISOString()}: received unserializable message; no data.hash`) }
-      if(!messageObject.data.amount) { return console.warn(`${new Date().toISOString()}: received unserializable message; no data.amount`) }
-      const amount = parseInt(messageObject.data.amount)
+      //console.log(`${new Date().toISOString()}: got newTransaction`, messageObject)
+      if(messageObject.topic !== "confirmation") { return console.log(`${new Date().toISOString()}: ignore ${messageObject.event}`) }
+      if(!messageObject.message) { return console.warn(`${new Date().toISOString()}: received unserializable message; no data`) }
+      if(!messageObject.message.hash) { return console.warn(`${new Date().toISOString()}: received unserializable message; no data.hash`) }
+      if(!messageObject.message.amount) { return console.warn(`${new Date().toISOString()}: received unserializable message; no data.amount`) }
+      const amount = parseInt(messageObject.message.amount)
 
       transactionCallback({
-        hash: messageObject.data.hash,
+        hash: messageObject.message.hash,
         value: amount
       })
       ++transactionsWithinInterval

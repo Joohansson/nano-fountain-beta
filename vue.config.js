@@ -39,10 +39,10 @@ const socialConfigs = {
     VUE_APP_DESCRIPTION: "Watch transactions flow on the IOTA network"
   },
   VUE_APP_NANO_FOUNTAIN: {
-    VUE_APP_TITLE: "NANO Fountain",
-    VUE_APP_URL: "https://www.nano-fountain.com",
+    VUE_APP_TITLE: "NANO BETA Fountain",
+    VUE_APP_URL: "https://bfountain.nanos.cc",
     VUE_APP_SOCIAL_IMAGE: "https://www.nano-fountain.com/nano-fountain-reduced.png",
-    VUE_APP_DESCRIPTION: "Watch transactions flow on the NANO network"
+    VUE_APP_DESCRIPTION: "Watch transactions flow on the NANO BETA network"
   },
   VUE_APP_BANANO_FOUNTAIN: {
     VUE_APP_TITLE: "BANANO Fountain",

@@ -1,5 +1,6 @@
 {
   "name": "iota-fountain",
+  "homepage": ".",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -15,7 +16,8 @@
     "deploy-dist-bitcoin": "aws s3 sync dist s3://www.bitcoin-fountain.com --delete",
     "deploy-dist-nano": "aws s3 sync dist s3://www.nano-fountain.com --delete",
     "deploy-dist-banano": "aws s3 sync dist s3://www.banano-fountain.com --delete",
-    "deploy-dist-iota": "aws s3 sync dist s3://www.iota-fountain.com --delete"
+    "deploy-dist-iota": "aws s3 sync dist s3://www.iota-fountain.com --delete",
+    "deploy-gh-nano": "VUE_APP_NANO_FOUNTAIN=true vue-cli-service build && gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
@@ -37,6 +39,7 @@
     "copy-webpack-plugin": "^4.6.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.2.3",
+    "gh-pages": "^2.2.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

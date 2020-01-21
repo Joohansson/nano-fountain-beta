@@ -135,7 +135,7 @@
               <BANANOFountainDescription v-if="isBANANOFountain"/>
             </div>
             <div class="column">
-              <p>View source code at
+              <p>This is a fork from
                 <a href="https://github.com/pRizz/iota-fountain" class="button is-small is-dark" target="_blank">
                   <span class="icon">
                     <i class="fab fa-github"></i>
@@ -147,6 +147,7 @@
             </div>
             <div class="column">
               <p>Copyright © 2018 Peter Ryszkiewicz</p>
+              <p>Forked by Joohansson @ 2019</p>
               <p>MIT Licensed</p>
               <p>Check out my other crypto projects at <a href="https://www.prizzventuresllc.com" target="_blank">https://www.prizzventuresllc.com</a>
               </p>

@@ -1,10 +1,9 @@
 <template>
   <div>
-    <h1 class="heading title is-4" style="color: gray;">NANO Fountain</h1>
-    <h1 class="subtitle is-6" style="color: gray;">A visualizer for new NANO transactions that utilizes particle physics
-      to render a fountain. Displays new transactions as they are emitted by a NANO node.</h1>
-    <h1 class="subtitle is-6" style="color: gray;">Stream data courtesy of <a target="_blank"
-                                                                              href="https://nanocrawler.cc/">https://nanocrawler.cc/</a>
+    <h1 class="heading title is-4" style="color: gray;">NANO BETA Fountain</h1>
+    <h1 class="subtitle is-6" style="color: gray;">A visualizer for new NANO beta transactions (forked from <a href="https://www.nano-fountain.com/">nano-fountain.com</a>) that utilizes particle physics
+      to render a fountain. Displays new transactions as they are emitted by a NANO beta node.</h1>
+    <h1 class="subtitle is-6" style="color: gray;">Stream data courtesy of <a href="https://beta.nanoticker.info">NanoTicker</a>
     </h1>
     <h1 class="subtitle is-6" style="color: gray;">Particle physics library adapted from <a target="_blank"
                                                                                             href="http://google.github.io/liquidfun/">Google's
