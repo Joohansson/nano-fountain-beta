@@ -8,7 +8,7 @@ import Emitter from 'events'
 
 const emitter = new Emitter()
 const bufferedItems = []
-const emissionDelay = 50
+const emissionDelay = 0
 
 function itemReceived(item) {
   bufferedItems.push(item)

@@ -33,9 +33,9 @@
       },
       useMoonGravity(shouldUseMoonGravity) {
         if(shouldUseMoonGravity) {
-          this.setGravity(0, -1.62)
+          this.setGravity(0, -1)
         } else {
-          this.setGravity(0, -9.806)
+          this.setGravity(0, -2)
         }
       },
       showFluidOutline(shouldShowFluidOutline) {

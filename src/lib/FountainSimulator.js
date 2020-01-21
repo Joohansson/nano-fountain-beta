@@ -10,7 +10,7 @@ window.world = null // FIXME: liquidfun.js:b2Body.prototype.CreateFixtureFromDef
 let world = null
 let fountainWaterParticleSystem = null
 
-const timeStep = 1.0 / 60.0
+const timeStep = 1.0 / 10.0
 const velocityIterations = 8
 const positionIterations = 3
 
@@ -136,7 +136,7 @@ function step() {
 
 function Testbed() {
   ResetWorld()
-  world.SetGravity(new b2Vec2(0, -10))
+  world.SetGravity(new b2Vec2(0, -2))
 
   createFountain({ world })
 }
